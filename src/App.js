@@ -12,15 +12,15 @@ import Posteos from './components/Posteos';
 function App() {
     const [likes, setLikes] = useState(0); 
 
-    const aumentarLikes= () =>{
+    const aumentar = () => {
       setLikes(likes + 1)
     }
 
   return (
-    <div className="App">
+    <div className="App"> 
      
-      <Estatus  likes={likes} setLikes={setLikes}/>
-      <Posteos likes = {likes} setLikes = {setLikes} aumentarLikes= {aumentarLikes}/>
+      <Estatus  likes={likes}/>
+      <Posteos aumentar = {aumentar} />
     </div>
   );
 }
